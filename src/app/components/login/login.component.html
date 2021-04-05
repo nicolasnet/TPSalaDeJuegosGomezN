@@ -1,1 +1,28 @@
-Login Works!!!!!
+<div  >
+    <div >
+      <form action="return true;">
+        <div class="imgcontainer">
+          <img src="./assets/imagenes/login-icon.png" alt="Avatar" class="avatar" max-width="104" >
+        </div>
+  
+        <div >
+          <label><b>Usuario</b></label>
+          <input type="text" placeholder="Usuario"  [(ngModel)]="usuario"  name="uname" required>
+  
+          <label><b>Clave</b></label>
+          <input type="password" placeholder="Clave"  [(ngModel)]="clave" name="psw" required>
+              
+          <button *ngIf="logeando"  (click)="Entrar()" class="btn btn-default btn-lg ingresarBtn">Ingresar</button>
+          <br>
+                  
+          <input type="checkbox" checked="checked"> <label > Recordar mis datos </label>
+        </div>
+  
+        <div >
+          <button type="button" class="btn btn-default btn-lg cancelbtn" routerLink="/home">Cancelar</button>
+          <button type="button" class="btn btn-default btn-lg aceptbtn" routerLink="/registro" >Registrarse</button>
+        </div>
+       
+      </form>
+    </div>
+  </div>
