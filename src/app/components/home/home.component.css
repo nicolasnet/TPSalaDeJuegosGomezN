@@ -1,0 +1,84 @@
+.imagenDeMenu{
+    width: 65px;
+    height: 70px;
+}
+
+.hero-text {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: darkturquoise;
+    background-color: transparent;
+    font: bolder;
+}
+
+.fondo{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-image: url("../../../assets/imagenes/bg.jpg");
+    background-size: 100%;
+    
+
+}
+
+.list-group-item{
+    background-color: transparent;
+    border: none;
+    width: 35%;
+}
+
+.list-group-item:any-link{
+    text-decoration: none;
+
+}
+
+.media-heading{
+    padding: 7%;
+    color: whitesmoke;
+}
+
+.media-heading:any-link{
+    text-decoration: none;
+}
+
+.colorGame:hover{
+    background: -webkit-linear-gradient(rgb(0, 94, 201),rgb(255, 0, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: tomato;
+    text-decoration: none;
+}
+
+.colorRed:hover{
+    background: -webkit-linear-gradient(rgb(167, 1, 1),rgb(204, 1, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: rgb(167, 1, 1);
+}
+
+.colorBlue:hover{
+    background: -webkit-linear-gradient(rgb(3, 89, 187),rgb(3, 99, 209));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: rgb(3, 89, 187);
+}
+
+.colorGreen:hover{
+    background: -webkit-linear-gradient(rgb(0, 160, 125),rgb(3, 194, 152));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: rgb(0, 160, 125);
+}
+
+.imgDragon{
+    float: right;
+    position: fixed;
+    margin-left: 60%;
+    margin-top: 20%;
+    width: 20%;
+
+}
