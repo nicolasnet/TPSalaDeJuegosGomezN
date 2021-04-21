@@ -10,6 +10,10 @@ import { QuienSoyComponent } from './components/quien-soy/quien-soy.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RegistroComponent } from './components/registro/registro.component';
 import { CabeceraComponent } from './components/cabecera/cabecera.component';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AuthService } from './services/auth.service';
 
 
 @NgModule({
@@ -25,9 +29,11 @@ import { CabeceraComponent } from './components/cabecera/cabecera.component';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

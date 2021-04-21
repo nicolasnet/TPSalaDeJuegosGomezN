@@ -1,28 +1,53 @@
-<div  >
-    <div >
-      <form action="return true;">
-        <div class="imgcontainer">
-          <img src="./assets/imagenes/login-icon.png" alt="Avatar" class="avatar" max-width="104" >
-        </div>
+
   
-        <div >
-          <label><b>Usuario</b></label>
-          <input type="text" placeholder="Usuario"  [(ngModel)]="usuario"  name="uname" required>
+<form action="return true;">
   
-          <label><b>Clave</b></label>
-          <input type="password" placeholder="Clave"  [(ngModel)]="clave" name="psw" required>
-              
-          <button *ngIf="logeando"  (click)="Entrar()" class="btn btn-default btn-lg ingresarBtn">Ingresar</button>
-          <br>
-                  
-          <input type="checkbox" checked="checked"> <label > Recordar mis datos </label>
-        </div>
-  
-        <div >
-          <button type="button" class="btn btn-default btn-lg cancelbtn" routerLink="/home">Cancelar</button>
-          <button type="button" class="btn btn-default btn-lg aceptbtn" routerLink="/registro" >Registrarse</button>
-        </div>
-       
-      </form>
-    </div>
+  <div class="imgcontainer">
+    <img src="./assets/imagenes/login-icon.png" alt="Avatar" class="avatar" max-width="104" >
   </div>
+
+  <div >
+    <label><b>Email</b></label>
+    <input type="text" placeholder="Email" value={{emailIngreso}} #email>
+
+    <label><b>Clave</b></label>
+    <input type="password" placeholder="Clave" value={{contraIngreso}} #password>
+        
+    <div *ngIf="errorIngreso">
+
+      holaaaaaaaaaaaaaaaaaa
+
+    </div>
+
+    <button (click)="OnSignIn(email.value, password.value)" class="btn btn-default btn-lg ingresarBtn">Ingresar</button>
+    <br>
+    <input type="checkbox" checked="checked"> <label > Recordar mis datos </label>
+  </div>
+
+  <div >
+    <button type="reset" class="btn btn-default btn-lg cancelbtn" >Borrar</button>
+    <button type="button" class="btn btn-default btn-lg aceptbtn" routerLink="/registro" >Registrarse</button>
+  </div>
+  <div>
+    <button (click)="CompletaIngreso()" class="btn btn-default btn-lg completaBtn">Completar Ingreso</button>
+  </div>
+  
+</form>
+  
+
+
+<!-- 
+
+  <div>
+    <h2>Sing Up</h2>
+    <input type="text" #emailSignup>
+    <input type="text" #passwordSignup>
+    <button (click)="OnSignUp(emailSignup.value, passwordSignup.value)" >Sign Up</button>
+  </div>
+  <hr>
+  <div>
+    <h2>Sign In</h2>
+    <input type="text" #email>
+    <input type="password" #password>
+    <button (click)="OnSignIn(email.value, password.value)" >Sign In</button>
+  </div> -->
