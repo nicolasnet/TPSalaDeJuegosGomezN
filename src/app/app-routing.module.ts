@@ -9,12 +9,13 @@ import {RegistroComponent} from './components/registro/registro.component'
 
 
 
-const routes: Routes = [
-  { path: '', component: LoginComponent},
+const routes: Routes = [  
   { path: 'Login', component: LoginComponent},
   { path: 'home', component: HomeComponent },
   { path: 'Registro', component: RegistroComponent },
   { path: 'QuienSoy', component: QuienSoyComponent },
+  { path: 'Juegos', loadChildren: () => import('./juegos/juegos.module').then(m => m.JuegosModule) },
+  { path: '', component: LoginComponent},
   { path: '**', component: ErrorComponent}
 ];
 

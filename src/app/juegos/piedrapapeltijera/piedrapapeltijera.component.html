@@ -1,0 +1,65 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div style="text-align:center">
+  <h1>
+    {{nuevoJuego.nombre}}
+  </h1>
+</div>
+
+<div class="juego container">
+ 
+  <div class="row align-items-end divFila">
+      <div class="col-5 align-self-start">
+        <label for="">Partidas Ganadas</label> <input type="number" readonly [(ngModel)]="nuevoJuego.ContadorDeGanadas" style="width:30%" class="form-control">
+        <label for=""> Partidas Empatadas</label> <input type="number" readonly [(ngModel)]="nuevoJuego.ContadorDeEmpates" style="width:30%" class="form-control">
+        <label for="">Partidas Perdidas</label> <input type="number" readonly [(ngModel)]="nuevoJuego.ContadorDePerdidas" style="width:30%" class="form-control">
+      </div>
+
+      <div class="col-6">
+        <img class="imgreglas" src="../../../assets/imagenes/ppt-reglas.jpg">
+      </div>
+
+      <div class="col-1">
+
+        <div class="txtElije">
+            Elije tu jugada
+        </div>
+
+      </div>
+     
+
+  </div>
+
+  <div class="row align-items-center divFila">
+
+    <div class="col-5 align-items-start txtResultado">
+        {{Mensajes}}
+    </div>
+
+    <div class="col-6 divImagenes">
+        <img class="ppt" src="../../../assets/imagenes/ppt-piedra.jpg" (click)="piedra()">
+        <img class="ppt" src="../../../assets/imagenes/ppt-papel.jpg" (click)="papel()">
+        <img class="ppt" src="../../../assets/imagenes/ppt-tijera.jpg" (click)="tijera()">
+    </div>
+
+    <div class="col-1">
+          <div id="arrowAnim">
+            <div class="arrowSliding">
+              <div class="arrow"></div>
+            </div>
+            <div class="arrowSliding delay1">
+              <div class="arrow"></div>
+            </div>
+            <div class="arrowSliding delay2">
+              <div class="arrow"></div>
+            </div>
+            <div class="arrowSliding delay3">
+              <div class="arrow"></div>
+            </div>
+          </div>
+
+    </div>
+
+  </div>
+
+</div>
+

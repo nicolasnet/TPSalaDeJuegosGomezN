@@ -1,0 +1,92 @@
+.total{
+    width: 100%;
+    position: absolute;
+  }
+  
+  .card {
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+      border-bottom-left-radius: 4%;
+      border-bottom-right-radius: 4%;
+      max-width: 250px;
+      height: 100%;
+      margin: 10px;
+      float: left;
+      padding-bottom: 10px;
+      background-color: #DEF3A6;
+      text-align: center;
+  }
+  
+  
+  .card.inteligencia{
+    background-color: darkcyan;
+  }
+  
+  .card.ppt{
+    background-color: darkred;
+  }
+  
+  .card.adivina{
+    background-color: rgb(133, 2, 189);
+  }
+  
+  .card.dragon{
+    background-image: url("../../assets/imagenes/dragonorange.png");
+    background-size: 70%;
+    background-position-y: 75%;
+    background-position-x: 50%;
+    background-repeat: no-repeat;
+    background-color: black;  
+    color: whitesmoke;
+  }
+  
+  
+  
+  img {
+      border-radius: 5px 5px 0 0;
+      width: 200px;
+      height: 200px;
+  }
+  .container {
+      padding: 2px 16px;
+  }
+  
+  
+  .button{
+      display: inline-block;
+      width: 90%;
+      bottom: 0px;
+      padding: 5px 15px;
+      font-size: 24px;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+      color: black;
+      background-color: rgb(223, 213, 130);
+      border: none;
+      border-radius: 15px;
+      border: none;
+      outline: 0; 
+      padding: 8px;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+    }
+    
+    .button:hover {
+      background-color: darkorange;
+    }
+    
+    .button:active {
+      background-color:  rgb(191, 192, 113);
+      transform: translateY(4px);
+    }
+  
+    footer{
+      text-align: center;
+      float: right;
+      color: whitesmoke;
+      margin-top: 2%;
+      margin-right: 20%;
+      
+    }
