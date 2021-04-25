@@ -52,12 +52,12 @@ color: white;
     background-color: transparent;
     border: none;
     font-weight: bold;
-    border-radius: 50px;
-    margin: 0.4%;
-    width: 10%;
+    border-radius: 25px;
+    margin: 0.2%;
+    width: 12%;
 }
 .botonIzq:hover{
-    background: -webkit-linear-gradient(rgb(255, 0, 0),rgb(56, 0, 0));
+    background: -webkit-linear-gradient(rgb(255, 0, 0),rgb(0, 56, 0));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: black;

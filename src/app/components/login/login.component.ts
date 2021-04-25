@@ -42,17 +42,6 @@ export class LoginComponent implements OnInit {
       this.isSignedIn = false;
     }
   }
-
-
-  async OnSignUp(email:string, password: string){
-    await this.firebaseService.SignUp(email,password);
-    
-    if(this.firebaseService.isLoggedIn){
-      this.isSignedIn = true;
-      this.router.navigate(['/home']);
-    }    
-  }
-
   
   async OnSignIn(email:string, password: string){
     console.log(this.firebaseService.isLoggedIn);
@@ -60,6 +49,7 @@ export class LoginComponent implements OnInit {
     await this.firebaseService.SignIn(email,password);
     console.log("prueba2");
     if(this.firebaseService.isLoggedIn){
+      localStorage.setItem('usuario', email)
       this.isSignedIn = true;
       this.router.navigate(['/home']);
     }

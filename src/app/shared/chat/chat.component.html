@@ -1,0 +1,30 @@
+<div class="chatitems" *ngIf="usuarioInteractura">
+    <div class="card shadow-lg fondo" style="width: 20rem" *ngIf="chatActivo">
+        <div class="card-header">
+            Chat menu principal
+            <button type="button" class="close" (click)="chatActivo = false">
+                <span aria-hidden="true">×</span>
+            </button>
+        </div>
+        <div class="card-body overflow-auto fondo" style="height: 250px;" #scrollMe  [scrollTop]="scrollMe.scrollHeight">
+            <div *ngFor="let mensaje of chat">
+                <div class="card-text border my-1" 
+                [ngClass]="{'border-danger rounded-left ml-3 px-3 bg-darkred': mensaje.usuario == usuarioInteractura,
+                'border-info rounded-right mr-3 px-2 bg-info': mensaje.usuario != usuarioInteractura}">{{mensaje.comentario}}
+                    <p class="time-text text-right mb-0" >{{mensaje.usuario}} <span class="time-text">{{mensaje.hora.toMillis() | date:'dd/MM/yy HH:mm'}}</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Escriba su mensaje..." value='{{mensajeGuardar.comentario}}' #comentario>
+                <div class="input-group-append">
+                    <button class="btn btn-danger" type="button" (click)="enviarMensaje(comentario.value)">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-secondary" *ngIf="!chatActivo" (click)="chatActivo = true">
+        <img src="../../../assets/imagenes/chat (1).png" class="icono" >
+    </button>
+</div>

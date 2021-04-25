@@ -1,4 +1,38 @@
-<p>registro works!</p>
+<form [formGroup]="forma">
 
+    <div class="imgcontainer">
+    <img src="./assets/imagenes/registroUser.png" alt="Avatar" class="avatar" max-width="104" >
+    </div>
+
+    <div >
+        <label><b>Email</b></label>
+        <input type="text" placeholder="Email" formControlName="email" #email>
+        <small class="invalid" *ngIf="forma.get('email').errors?.required && forma.get('email').touched">El email es requerido</small>
+        <small class="invalid" *ngIf="forma.get('email').errors?.email && forma.get('email').touched">El formato es invalido</small>
+        <br>
+        <label><b>Clave</b></label>
+        <input type="text" placeholder="Clave" formControlName="psw" #psw>
+        <small class="invalid" *ngIf="forma.get('psw').errors?.required && forma.get('psw').touched">La clave es requerida</small>
+        <br>
+        <label><b>Repetir Clave</b></label>
+        <input type="text" placeholder="Repetir Clave" formControlName="psw2" #psw2>
+        <small class="invalid" *ngIf="forma.get('psw2').errors?.required && forma.get('psw2').touched">La clave es requerida por duplicado</small>
+        <br>
+            
+    <div class="invalid" *ngIf="errorIngreso">
+
+        <small>Las contraseñas no son iguales</small>
+
+    </div>
+
+        <button (click)="OnSignUp(email.value, psw.value, psw2.value)" class="btn btn-default btn-lg ingresarBtn">Registrarse</button>
+    </div>
+</form>
+
+
+
+
+<!-- 
 <input type="text" [(ngModel)]="mensaje.texto">
 <button (click)="EnviarMensaje()"> Enviar Mensaje </button>
+-->

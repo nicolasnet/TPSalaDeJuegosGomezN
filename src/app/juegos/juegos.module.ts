@@ -6,6 +6,7 @@ import { JuegosComponent } from './juegos.component';
 import { PiedrapapeltijeraComponent } from './piedrapapeltijera/piedrapapeltijera.component';
 import { TatetiComponent } from './tateti/tateti.component';
 import { MemotestComponent } from './memotest/memotest.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { MemotestComponent } from './memotest/memotest.component';
   ],
   imports: [
     FormsModule,
-    JuegosRoutingModule
+    JuegosRoutingModule,
+    SharedModule
   ]
 })
 export class JuegosModule { }

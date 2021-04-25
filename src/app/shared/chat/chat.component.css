@@ -1,0 +1,35 @@
+.icono{
+    width:300%;
+}
+
+.btn-secondary{
+    width: 20%;
+    background-color: transparent;
+    border-color: transparent; 
+   
+}
+
+
+.chatitems{
+    right: 20px;
+    bottom: 20px; 
+    position: absolute;
+}
+
+p.time-text{
+    font-size: x-small;
+}
+span.time-text{
+    color: white;
+}
+.fondo{
+    background-color:transparent;
+}
+
+.card-header{
+    color: whitesmoke;
+
+}
+.bg-darkred{
+    background-color: rgb(184, 8, 8);
+}

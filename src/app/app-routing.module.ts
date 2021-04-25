@@ -16,6 +16,7 @@ const routes: Routes = [
   { path: 'QuienSoy', component: QuienSoyComponent },
   { path: 'Juegos', loadChildren: () => import('./juegos/juegos.module').then(m => m.JuegosModule) },
   { path: '', component: LoginComponent},
+  { path: 'shared', loadChildren: () => import('./shared/shared.module').then(m => m.SharedModule) },
   { path: '**', component: ErrorComponent}
 ];
 
