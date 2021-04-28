@@ -1,3 +1,7 @@
+body{
+  background-image: url("../../assets/imagenes/bg.jpg");
+}
+
 .total{
     width: 100%;
     position: absolute;
