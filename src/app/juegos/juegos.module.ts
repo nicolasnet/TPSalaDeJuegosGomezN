@@ -7,6 +7,7 @@ import { PiedrapapeltijeraComponent } from './piedrapapeltijera/piedrapapeltijer
 import { TatetiComponent } from './tateti/tateti.component';
 import { MemotestComponent } from './memotest/memotest.component';
 import { SharedModule } from '../shared/shared.module';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     FormsModule,
     JuegosRoutingModule,
-    SharedModule
+    SharedModule,
+    CommonModule
   ]
 })
 export class JuegosModule { }

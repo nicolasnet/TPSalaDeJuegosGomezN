@@ -61,7 +61,7 @@ export class LoginComponent implements OnInit {
 
   CompletaIngreso(){
     console.log("entro a completar");
-    this.emailIngreso= "hola@hola.com";
+    this.emailIngreso= "admin@admin.com";
     this.contraIngreso = "123456";
   }
 

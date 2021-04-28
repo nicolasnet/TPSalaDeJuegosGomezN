@@ -11,11 +11,11 @@
         <small class="invalid" *ngIf="forma.get('email').errors?.email && forma.get('email').touched">El formato es invalido</small>
         <br>
         <label><b>Clave</b></label>
-        <input type="text" placeholder="Clave" formControlName="psw" #psw>
+        <input type="password" placeholder="Clave" formControlName="psw" #psw>
         <small class="invalid" *ngIf="forma.get('psw').errors?.required && forma.get('psw').touched">La clave es requerida</small>
         <br>
         <label><b>Repetir Clave</b></label>
-        <input type="text" placeholder="Repetir Clave" formControlName="psw2" #psw2>
+        <input type="password" placeholder="Repetir Clave" formControlName="psw2" #psw2>
         <small class="invalid" *ngIf="forma.get('psw2').errors?.required && forma.get('psw2').touched">La clave es requerida por duplicado</small>
         <br>
             

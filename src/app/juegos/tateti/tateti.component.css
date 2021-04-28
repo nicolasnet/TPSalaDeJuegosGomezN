@@ -1,0 +1,9 @@
+body{
+    background-image: url("../../../assets/imagenes/bg.jpg");
+}
+
+.alert{
+    max-width: 20%;
+    min-width: 10%;
+    margin-left: 40%;
+}
