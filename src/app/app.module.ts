@@ -17,6 +17,8 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AuthService } from './services/auth.service';
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EncuestaComponent } from './components/encuesta/encuesta.component';
+import { ResultadosComponent } from './components/resultados/resultados.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ErrorComponent,
     QuienSoyComponent,
     RegistroComponent,
-    CabeceraComponent
+    CabeceraComponent,
+    EncuestaComponent,
+    ResultadosComponent
   ],
   imports: [
     BrowserModule,

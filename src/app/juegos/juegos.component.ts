@@ -14,6 +14,7 @@ export class JuegosComponent implements OnInit {
 
   ngOnInit() {
   }
+
   Juego(tipo: string) {
     switch (tipo) {
       case 'Memotest':
@@ -24,13 +25,13 @@ export class JuegosComponent implements OnInit {
         this.router.navigate(['/Juegos/Tateti']);
         break;
 
-      case 'AdivinaMasListado':
-        this.router.navigate(['/Juegos/AdivinaMasListado']);
-        break;
+      // case 'AdivinaMasListado':
+      //   this.router.navigate(['/Juegos/AdivinaMasListado']);
+      //   break;
 
-      case 'AgilidadaMasListado':
-        this.router.navigate(['/Juegos/AgilidadaMasListado']);
-        break;
+      // case 'AgilidadaMasListado':
+      //   this.router.navigate(['/Juegos/AgilidadaMasListado']);
+      //   break;
 
       case 'PPT':
         this.router.navigate(['/Juegos/PPT']);

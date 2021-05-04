@@ -23,10 +23,9 @@ export class MensajesService {
   }
 
   create(mensaje: Mensaje): any{
-    console.log("Entro a funcion create");
+    console.log("Entro a funcion createeeeeeeee");
     return this.mensajesRef.add({...mensaje});
   }
-
 
 
   update(id: string, data: any): Promise<void> {
