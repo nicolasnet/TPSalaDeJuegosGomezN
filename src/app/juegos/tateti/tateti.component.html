@@ -42,21 +42,24 @@
     <div [hidden]="terminoJuego">
         <button mat-raised-button color="warn" class="btn btn-lg" (click)="reiniciarJuego()">Reiniciar juego</button>
     </div>
+    <div [hidden]="terminoJuego">
+      <button mat-raised-button color="warn" class="btn btn-lg" (click)="enviarResultados()">Enviar Resultados</button>
+  </div>
       <br>
       
     <div *ngIf="nuevoJuego.resultado == 'Perdio'">
       <div class="alert alert-danger" role="alert">
-        ¡Perdiste, mejor suerte para la proxima!
+        ¡Perdiste, mejor suerte para la proxima, CERO puntos!
       </div>
     </div>
     <div *ngIf="nuevoJuego.resultado == 'Empate'">
       <div class="alert alert-warning" role="alert">
-          ¡Empataron con la máquina!
+          ¡Empataste con la máquina, es 1 punto!
       </div>
     </div>
     <div *ngIf="nuevoJuego.resultado == 'Gano'">
       <div class="alert alert-success" role="alert">
-        ¡Ganaste!
+        ¡Ganaste, son 3 puntos!
       </div>
     </div>
       

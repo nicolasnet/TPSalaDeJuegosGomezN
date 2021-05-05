@@ -8,6 +8,7 @@ import { TatetiComponent } from './tateti/tateti.component';
 import { MemotestComponent } from './memotest/memotest.component';
 import { SharedModule } from '../shared/shared.module';
 import { CommonModule } from '@angular/common';
+import { DragonComponent } from './dragon/dragon.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { CommonModule } from '@angular/common';
     JuegosComponent,
     PiedrapapeltijeraComponent,
     TatetiComponent,
-    MemotestComponent
+    MemotestComponent,
+    DragonComponent
   ],
   imports: [
     FormsModule,

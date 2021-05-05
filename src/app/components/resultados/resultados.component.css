@@ -1,0 +1,14 @@
+table {
+    width: 100%;
+    background-color: transparent;
+}
+th{
+    background-color: darkred;
+    color: whitesmoke;
+}
+
+td{
+    color: whitesmoke;
+}
+
+  

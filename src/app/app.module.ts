@@ -19,6 +19,7 @@ import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EncuestaComponent } from './components/encuesta/encuesta.component';
 import { ResultadosComponent } from './components/resultados/resultados.component';
+import { MatTableModule } from '@angular/material/table';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { ResultadosComponent } from './components/resultados/resultados.componen
     AngularFireDatabaseModule,
     ReactiveFormsModule,
     SharedModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatTableModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

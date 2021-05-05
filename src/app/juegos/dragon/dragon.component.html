@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div style="text-align:center">
+    <h1>
+      {{nuevoJuego.nombre}}
+    </h1>
+</div>
+
+  <div class="container-fluid bg-1 text-center">
+    <img src="./assets/imagenes/dragon-fuego.jpg" class="img-responsive margin fotoDragon">    
+  </div>
+  
+  <div class="container-fluid bg-2 text-center">
+      <h3 class="margin">¿Que sabemos de ellos?</h3>
+    <p>El dragón (del latín draco, y este del griego δράκων , drákon, ‘serpiente’) es un ser mitológico que aparece de diversas formas en varias culturas de todo el mundo, con diferentes simbolismos asociados.
+      Hay dos tradiciones principales sobre dragones: los dragones europeos, derivados de las tradiciones populares europeas y de la mitología de Grecia y Oriente Próximo, y los dragones orientales, de origen chino, pero conocidos también en Japón, Corea y otros países asiáticos. Las dos tradiciones surgieron probablemente de forma independiente, pero en su desarrollo se han influido mutuamente.      
+      La palabra aparece también en la tradición cristiana: el Apocalipsis se refiere a Satanás como el gran dragón, la serpiente antigua. <br>
+      El dragón ha sido inspiración de grandes libros que han sido traspasados al cine al igual que novelas y poemas. <br> Sin duda el dragón es uno de los más grandes y conocidos seres mitológicos de toda la historia. </p>
+    
+  </div>
+  
+  <div class="container-fluid bg-3 text-center">
+    <h3 class="margin">Hora de jugar</h3><br>
+    <a>A lo largo de este sitio Web han aparecido varios dragones.</a>
+    <p class="text-muted">(Tienes 10 puntos, por cada intento pierdes un punto, trata de no errar mucho jeje)</p>
+    <form name="juego">
+      <input [(ngModel)]="nuevoJuego.numeroElegido" placeholder="Cuantos Dragones aparecieron?" name="numeroIngresado" type="number" class="form-control inpNum"/>      
+      <br>
+       <h2><button  (click)="verificar()" class="btn btn-default btn-lg colorMio">Verificar</button></h2>
+      
+      <div class="letraGris">
+       <h2><p *ngIf="nuevoJuego.numeroElegido!=5" ><i class="fa fa-spinner fa-spin"></i>Esperando respuesta</p></h2>
+   
+       <h3 [hidden]="!nuevoJuego.gano">Usted adivino la cantidad de Dragones, es muy observador</h3>
+       <h3 [hidden]="nuevoJuego.gano">Todavia no encontraste todos los dragones </h3>
+      </div>
+       <img src="./assets/imagenes/dragongold.gif" class="miniDragon">
+   
+   </form>
+   <div id="snackbar">{{Mensajes}}</div>
+  </div>
+  
+  <footer class="container-fluid bg-4 text-center">
+    <p>Mas Informacion: <a href="https://es.wikipedia.org/wiki/Drag%C3%B3n">Wiki Dragon</a></p>    
+  </footer>

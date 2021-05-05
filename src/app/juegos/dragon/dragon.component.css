@@ -1,0 +1,119 @@
+h1{
+    color: rgb(187, 0, 0);
+}
+
+.fotoDragon{
+    width: 30%; 
+    height: 30%;
+}
+
+body {
+    font: 20px Montserrat, sans-serif;
+    line-height: 1.8;
+    color: #f5f6f7;
+}
+
+
+p {font-size: 16px;}
+
+.inpNum{
+    width: 20%;
+    background-color: transparent;
+    margin-left: 40%;
+}
+.inpNum:hover{
+    border-color: #1abc9c;
+}
+
+.margin {margin-bottom: 10px;}
+
+.bg-1 { 
+    background: -webkit-linear-gradient(Black, darkred);
+    color:  #175caa;
+}
+
+.bg-2 { 
+    background: -webkit-linear-gradient(darkred,Black);
+    color: whitesmoke;
+}
+
+.colorMio{
+    color: whitesmoke;
+    border-block-start-color: #1abc9c;
+    border-block-end-color: #1abc9c;    
+}
+
+.colorMio:hover{
+    color: rgb(180, 3, 3);
+}
+
+.bg-3 { 
+    background: -webkit-linear-gradient(Black, rgb(87, 84, 84));
+    color: rgb(228, 227, 227);
+}
+.bg-4 { 
+    background-color: #2f2f2f; /* Black Gray */
+    color: #fff;
+}
+.container-fluid {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.letraGris{
+    color: grey;
+}
+
+.miniDragon{
+    width: 10%;
+    height: 10%;
+    margin-left: 80%;
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+   
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 80px;
+    font-size: 17px;
+}
+#snackbar.Ganador {
+    background-color: rgb(6, 183, 196);
+}
+#snackbar.Perdedor {
+    background-color: transparent;
+    color: rgb(189, 5, 5);
+}
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 80px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 80px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 80px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 80px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}

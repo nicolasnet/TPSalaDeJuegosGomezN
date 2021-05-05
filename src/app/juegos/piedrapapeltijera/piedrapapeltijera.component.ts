@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Resultado } from 'src/app/clases/resultado';
+import { ResultadosFirebaseService } from 'src/app/services/resultados-firebase.service';
 import { JuegoPiedraPapelTijera } from '../clases/juego-piedra-papel-tijera';
 
 @Component({
@@ -9,9 +11,11 @@ import { JuegoPiedraPapelTijera } from '../clases/juego-piedra-papel-tijera';
 export class PiedrapapeltijeraComponent implements OnInit {
   nuevoJuego: JuegoPiedraPapelTijera;
   Mensajes:string;
+  resultadosNuevos: Resultado;
 
-  constructor() { 
+  constructor(private fireService: ResultadosFirebaseService) { 
     this.nuevoJuego = new JuegoPiedraPapelTijera();
+    this.resultadosNuevos = new Resultado();
   }
   ngOnInit() {
   }
@@ -34,7 +38,13 @@ export class PiedrapapeltijeraComponent implements OnInit {
     console.log(this.Mensajes);
   }
 
-  
+  enviarResultados(){
+    this.resultadosNuevos.fecha= new Date;
+    this.resultadosNuevos.juego= "PPT";
+    this.resultadosNuevos.usuario= localStorage.getItem('usuario');
+    this.resultadosNuevos.puntaje= this.nuevoJuego.ContadorDeGanadas * 3 + this.nuevoJuego.ContadorDeEmpates;
+    this.fireService.create(this.resultadosNuevos);
+  }
   
 
 }

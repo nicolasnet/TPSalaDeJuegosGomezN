@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Resultado } from 'src/app/clases/resultado';
 import { AuthService } from 'src/app/services/auth.service';
+import { ResultadosFirebaseService } from 'src/app/services/resultados-firebase.service';
 import {JuegoTateti} from '../clases/juego-tateti';
 
 @Component({
@@ -22,7 +24,7 @@ export class TatetiComponent implements OnInit {
   nombreJugador : string;
   splitted;
 
-  constructor(private servicio : AuthService ) {
+  constructor(private fireServicio : ResultadosFirebaseService ) {
     this.terminoJuego = true;
     this.nuevoJuego = new JuegoTateti();
   }
@@ -75,12 +77,6 @@ export class TatetiComponent implements OnInit {
           (<HTMLInputElement>document.getElementById("botonOcho")).disabled = true;
           (<HTMLInputElement>document.getElementById("botonNueve")).disabled = true;
           this.terminoJuego = false;
-          // this.servicio.getAuth().catch( user =>{
-          //   let mail = user.email;      
-          //   let splitted = mail.split("@",1);
-          //   this.nuevoJuego.jugador = splitted[0];
-          // });
-          // this.servicio.guardarPuntuaciónTateti(this.nuevoJuego);
         }
         else
           this.jugar();
@@ -149,12 +145,29 @@ export class TatetiComponent implements OnInit {
     this.terminoJuego = true;
     this.botonesJuego = true;
     this.botonesEleccion = false;
-    this.nuevoJuego = new JuegoTateti();
-    // this.servicio.getAuth().catch( user =>{
-    //   let mail = user.email;      
-    //   let splitted = mail.split("@",1);
-    //   this.nuevoJuego.jugador = splitted[0];
-    // });
-
+    this.nuevoJuego = new JuegoTateti();    
   }
+
+  enviarResultados(){
+    const nuevoResultado = new Resultado;
+    nuevoResultado.fecha = new Date;
+    nuevoResultado.juego = "TATETI";
+    nuevoResultado.usuario = localStorage.getItem('usuario');
+    switch(this.nuevoJuego.resultado){
+      case "Gano":
+        nuevoResultado.puntaje = 3;
+        break;      
+      case "Empate":
+        nuevoResultado.puntaje = 1;
+        break;      
+      case "Perdio":
+        nuevoResultado.puntaje = 0;
+        break;      
+    }
+    this.fireServicio.create(nuevoResultado);
+    
+  }
+
+
+
 }
