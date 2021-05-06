@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Encuesta } from 'src/app/clases/encuesta';
 import { EncuestaFirebaseService } from 'src/app/services/encuesta-firebase.service';
 
@@ -13,7 +14,7 @@ export class EncuestaComponent implements OnInit {
   public forma: FormGroup;
   nuevaEncuesta: Encuesta;
 
-  constructor(private fb: FormBuilder, private fireService: EncuestaFirebaseService) { }
+  constructor(private fb: FormBuilder, private fireService: EncuestaFirebaseService, private ruta: Router) { }
 
   ngOnInit(): void {
     this.forma = this.fb.group({
@@ -54,6 +55,7 @@ export class EncuestaComponent implements OnInit {
     encuestaNueva.opinion = this.forma.get('opinion').value;
     encuestaNueva.favorito = this.forma.get('favorito').value;
     this.fireService.create(encuestaNueva);
+    this.ruta.navigate(["/home"]);
   }
 
   toTitleCase(str) {
