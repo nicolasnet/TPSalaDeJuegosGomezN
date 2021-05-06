@@ -9,6 +9,7 @@ import { MemotestComponent } from './memotest/memotest.component';
 import { SharedModule } from '../shared/shared.module';
 import { CommonModule } from '@angular/common';
 import { DragonComponent } from './dragon/dragon.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { DragonComponent } from './dragon/dragon.component';
     FormsModule,
     JuegosRoutingModule,
     SharedModule,
-    CommonModule
+    CommonModule,
+    FlexLayoutModule
   ]
 })
 export class JuegosModule { }

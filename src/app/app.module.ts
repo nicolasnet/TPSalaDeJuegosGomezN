@@ -20,6 +20,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EncuestaComponent } from './components/encuesta/encuesta.component';
 import { ResultadosComponent } from './components/resultados/resultados.component';
 import { MatTableModule } from '@angular/material/table';
+import { ServiciopaisesService } from './services/serviciopaises.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -43,9 +45,10 @@ import { MatTableModule } from '@angular/material/table';
     ReactiveFormsModule,
     SharedModule,
     BrowserAnimationsModule,
-    MatTableModule
+    MatTableModule,
+    HttpClientModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, ServiciopaisesService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

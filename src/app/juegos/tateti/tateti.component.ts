@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Resultado } from 'src/app/clases/resultado';
 import { AuthService } from 'src/app/services/auth.service';
 import { ResultadosFirebaseService } from 'src/app/services/resultados-firebase.service';
@@ -24,7 +25,7 @@ export class TatetiComponent implements OnInit {
   nombreJugador : string;
   splitted;
 
-  constructor(private fireServicio : ResultadosFirebaseService ) {
+  constructor(private fireServicio : ResultadosFirebaseService, private ruta: Router ) {
     this.terminoJuego = true;
     this.nuevoJuego = new JuegoTateti();
   }
@@ -165,6 +166,7 @@ export class TatetiComponent implements OnInit {
         break;      
     }
     this.fireServicio.create(nuevoResultado);
+    this.ruta.navigate(["/Juegos"]);
     
   }
 
